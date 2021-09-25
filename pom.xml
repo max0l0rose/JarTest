@@ -30,14 +30,51 @@
 
         <dependency>
             <groupId>org.springframework.shell</groupId>
-            <artifactId>spring-shell-standard</artifactId>
+            <artifactId>spring-shell-starter</artifactId>
             <version>2.0.1.RELEASE</version>
         </dependency>
 
-<!--        <dependency>-->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.ws</groupId>
+            <artifactId>spring-ws-core</artifactId>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.jdom/jdom -->
+        <dependency>
+            <groupId>org.jdom</groupId>
+            <artifactId>jdom</artifactId>
+            <version>2.0.2</version>
+        </dependency>
+        <dependency>
+            <groupId>jaxen</groupId>
+            <artifactId>jaxen</artifactId>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.springframework/spring-messaging -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-messaging</artifactId>
+            <version>4.3.19.RELEASE</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.projectreactor</groupId>
+            <artifactId>reactor-core</artifactId>
+            <version>3.4.10</version>
+        </dependency><!--        <dependency>-->
 <!--            <groupId>org.springframework.shell</groupId>-->
-<!--            <artifactId>spring-shell-starter</artifactId>-->
+<!--            <artifactId>spring-shell-standard</artifactId>-->
 <!--            <version>2.0.1.RELEASE</version>-->
+<!--        </dependency>-->
+
+<!--        <dependency>-->
+<!--            <groupId>org.slf4j</groupId>-->
+<!--            <artifactId>slf4j-simple</artifactId>-->
+<!--            <version>2.0.0-alpha4</version>-->
 <!--        </dependency>-->
 
     </dependencies>
@@ -54,31 +91,52 @@
         <finalName>${project.artifactId}</finalName>
 
         <plugins>
-            <plugin>
-                <!-- Build an _executable_ JAR -->
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jar-plugin</artifactId>
-                <version>3.2.0</version>
-                <configuration>
-                    <archive>
-                        <manifest>
-                            <mainClass>com.example.Main</mainClass>
-<!--                            <addClasspath>true</addClasspath>-->
-<!--                            <classpathPrefix>lib/</classpathPrefix>-->
-                        </manifest>
-                    </archive>
-                </configuration>
-            </plugin>
-
 <!--            <plugin>-->
-<!--                <groupId>org.springframework.boot</groupId>-->
-<!--                <artifactId>spring-boot-maven-plugin</artifactId>-->
-<!--                <version>2.5.4</version>-->
+<!--                &lt;!&ndash; Build an _executable_ JAR &ndash;&gt;-->
+<!--                <groupId>org.apache.maven.plugins</groupId>-->
+<!--                <artifactId>maven-jar-plugin</artifactId>-->
+<!--                <version>3.2.0</version>-->
 <!--                <configuration>-->
-<!--                    <mainClass>com.example.Main</mainClass>-->
-<!--&lt;!&ndash;                    <layout>ZIP </layout>&ndash;&gt;-->
+<!--                    <archive>-->
+<!--                        <manifest>-->
+<!--                            <mainClass>com.example.Main</mainClass>-->
+<!--&lt;!&ndash;                            <addClasspath>true</addClasspath>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <classpathPrefix>lib/</classpathPrefix>&ndash;&gt;-->
+<!--                        </manifest>-->
+<!--                    </archive>-->
 <!--                </configuration>-->
 <!--            </plugin>-->
+
+
+<!--            <plugin>-->
+<!--                <groupId>org.apache.maven.plugins</groupId>-->
+<!--                <artifactId>maven-assembly-plugin</artifactId>-->
+<!--                <version>2.2-beta-5</version>-->
+<!--                <configuration>-->
+<!--                    <archive>-->
+<!--                        <manifest>-->
+<!--                            <mainClass>com.example.Main</mainClass>-->
+<!--                            &lt;!&ndash;                            <addClasspath>true</addClasspath>&ndash;&gt;-->
+<!--                            &lt;!&ndash;                            <classpathPrefix>lib/</classpathPrefix>&ndash;&gt;-->
+<!--                        </manifest>-->
+<!--                    </archive>-->
+
+<!--                    <descriptorRefs>-->
+<!--                        <descriptorRef>jar-with-dependencies</descriptorRef>-->
+<!--                    </descriptorRefs>-->
+
+<!--                </configuration>-->
+<!--            </plugin>-->
+
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>2.5.4</version>
+                <configuration>
+                    <mainClass>com.example.Main</mainClass>
+<!--                    <layout>ZIP </layout>-->
+                </configuration>
+            </plugin>
 
         </plugins>
     </build>
