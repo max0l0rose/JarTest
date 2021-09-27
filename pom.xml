@@ -25,7 +25,6 @@
 <!--        <dependency>-->
 <!--            <groupId>org.springframework.boot</groupId>-->
 <!--            <artifactId>spring-boot-starter</artifactId>-->
-<!--            <version>2.5.4</version>-->
 <!--        </dependency>-->
 
         <dependency>
@@ -38,38 +37,45 @@
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
         </dependency>
-
         <dependency>
-            <groupId>org.springframework.ws</groupId>
-            <artifactId>spring-ws-core</artifactId>
-        </dependency>
-        <!-- https://mvnrepository.com/artifact/org.jdom/jdom -->
-        <dependency>
-            <groupId>org.jdom</groupId>
-            <artifactId>jdom</artifactId>
-            <version>2.0.2</version>
-        </dependency>
-        <dependency>
-            <groupId>jaxen</groupId>
-            <artifactId>jaxen</artifactId>
+            <groupId>org.springframework.shell</groupId>
+            <artifactId>spring-shell-standard</artifactId>
+            <version>2.0.1.RELEASE</version>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/org.springframework/spring-messaging -->
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-messaging</artifactId>
-            <version>4.3.19.RELEASE</version>
-        </dependency>
-
-        <dependency>
-            <groupId>io.projectreactor</groupId>
-            <artifactId>reactor-core</artifactId>
-            <version>3.4.10</version>
-        </dependency><!--        <dependency>-->
-<!--            <groupId>org.springframework.shell</groupId>-->
-<!--            <artifactId>spring-shell-standard</artifactId>-->
-<!--            <version>2.0.1.RELEASE</version>-->
+        <!--        <dependency>-->
+<!--            <groupId>org.springframework.ws</groupId>-->
+<!--            <artifactId>spring-ws-core</artifactId>-->
 <!--        </dependency>-->
+<!--        &lt;!&ndash; https://mvnrepository.com/artifact/org.jdom/jdom &ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>org.jdom</groupId>-->
+<!--            <artifactId>jdom</artifactId>-->
+<!--            <version>2.0.2</version>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>jaxen</groupId>-->
+<!--            <artifactId>jaxen</artifactId>-->
+<!--        </dependency>-->
+
+<!--        &lt;!&ndash; https://mvnrepository.com/artifact/org.springframework/spring-messaging &ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>org.springframework</groupId>-->
+<!--            <artifactId>spring-messaging</artifactId>-->
+<!--            <version>4.3.19.RELEASE</version>-->
+<!--        </dependency>-->
+
+<!--        <dependency>-->
+<!--            <groupId>io.projectreactor</groupId>-->
+<!--            <artifactId>reactor-core</artifactId>-->
+<!--            <version>3.4.10</version>-->
+<!--        </dependency>&lt;!&ndash;        <dependency>&ndash;&gt;-->
+<!--&lt;!&ndash;            <groupId>org.springframework.shell</groupId>&ndash;&gt;-->
+<!--&lt;!&ndash;            <artifactId>spring-shell-standard</artifactId>&ndash;&gt;-->
+<!--&lt;!&ndash;            <version>2.0.1.RELEASE</version>&ndash;&gt;-->
+<!--&lt;!&ndash;        </dependency>&ndash;&gt;-->
+
+
 
 <!--        <dependency>-->
 <!--            <groupId>org.slf4j</groupId>-->
@@ -135,6 +141,9 @@
                 <configuration>
                     <mainClass>com.example.Main</mainClass>
 <!--                    <layout>ZIP </layout>-->
+                        <jvmArguments>
+                            -Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=8000
+                        </jvmArguments>
                 </configuration>
             </plugin>
 
